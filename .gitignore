@@ -1,0 +1,8 @@
+*.vcd
+*.log
+*.out
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+Desktop.ini
