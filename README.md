@@ -44,11 +44,11 @@ counter-project/
   - `2'b11` = Load
 
 ## Team Task Distribution
-- Person 1: `control_unit.v`
-- Person 2: `counter_core.v`
-- Person 3: `features.v`
-- Person 4: `testbench.v`
-- Person 5: `top_module.v`, integration, GitHub organization, final report collection
+- Trneem : `control_unit.v`
+- Orpy : `counter_core.v`
+- Muqaddas : `features.v`
+- Nikita : `testbench.v`
+- Gehad: `top_module.v`, integration, GitHub organization, final report collection
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
