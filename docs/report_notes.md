@@ -1,31 +1,30 @@
 # Programmable Counter Working Notes
 
 ## Selected Topic
-- Exact topic from the spreadsheet:
-- Date and time proof captured:
+- Programmable Counter
 
 ## GitHub Repository Link
-- Add the repository URL here before final submission
+- https://github.com/alikhedr-cmyk/programmable-counter
 
 ## Team Members
-- Person 1:
+- Person 1: Trneem Abdulmaksud
 - Person 2:
-- Person 3:
-- Person 4:
+- Person 3: Esma Selim
+- Person 4: Muqaddas samadova
 - Person 5:
 - Person 6:
 - Person 7:
-- Person 8:
+- Person 8:Gehad Ali Khedr
 
 ## Student IDs
 - Person 1:
 - Person 2:
 - Person 3:
-- Person 4:
+- Person 4: 23040102094
 - Person 5:
 - Person 6:
 - Person 7:
-- Person 8:
+- Person 8: 23040102086
 
 ## Fixed Design Decisions
 - Counter width default: `4-bit`
@@ -65,3 +64,5 @@
 - Do not change port names without team agreement
 - Do not change mode meanings without team agreement
 - Keep the same signal priority in all modules
+- Each person writes the report section for their own module/task.
+- All report sections will be combined into one final report that must fit within 3 double-sided sheets.
