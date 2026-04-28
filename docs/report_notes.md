@@ -8,7 +8,7 @@
 
 ## Team Members
 - Person 1: Trneem Abdelmaksud
-- Person 2:
+- Person 2: Mukhammad Ismailov
 - Person 3: Esma Selim
 - Person 4: Muqaddas samadova
 - Person 5:
@@ -18,7 +18,7 @@
 
 ## Student IDs
 - Person 1: 22040102136
-- Person 2:
+- Person 2: 23040102093
 - Person 3: 22040102159
 - Person 4: 23040102094
 - Person 5:
