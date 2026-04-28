@@ -12,17 +12,17 @@
 - Person 3: Esma Selim
 - Person 4: Muqaddas samadova
 - Person 5:
-- Person 6:
+- Person 6: Shahajina Akter Orpy
 - Person 7:
 - Person 8:Gehad Ali Khedr
 
 ## Student IDs
-- Person 1: 220400102136
+- Person 1: 22040102136
 - Person 2:
-- Person 3:
+- Person 3: 22040102159
 - Person 4: 23040102094
 - Person 5:
-- Person 6:
+- Person 6: 24040102038
 - Person 7:
 - Person 8: 23040102086
 
