@@ -52,10 +52,10 @@ programmable-counter/
 
 ## Team Task Distribution
 - Trneem : `control_unit.v`
-- Person 2: `sync_logic.v`
+- Mukhammad : `sync_logic.v`
 - Esma : `counter_core.v`
 - Muqaddas : `features.v`
-- Person 5: `params.vh`
+- Islam : `params.vh`
 - Orpy: `control_unit_tb.v` and `counter_core_tb.v`
 - Nikita: `testbench.v` and GTKWave screenshots
 - Gehad : `top_module.v`, integration, GitHub organization, and final report assembly
