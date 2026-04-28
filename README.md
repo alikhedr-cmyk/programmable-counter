@@ -56,7 +56,7 @@ programmable-counter/
 - Trneem : `control_unit.v`
 - Person 2: `sync_logic.v`
 - Esma : `counter_core.v`
-- Person 4: `features.v`
+- Muqaddas : `features.v`
 - Person 5: `params.vh`
 - Person 6: `control_unit_tb.v` and `counter_core_tb.v`
 - Person 7: `testbench.v` and GTKWave screenshots
