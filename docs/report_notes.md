@@ -13,7 +13,7 @@
 - Person 4: Muqaddas samadova
 - Person 5:
 - Person 6: Shahajina Akter Orpy
-- Person 7:
+- Person 7: Nikita Afanasev
 - Person 8:Gehad Ali Khedr
 
 ## Student IDs
@@ -23,7 +23,7 @@
 - Person 4: 23040102094
 - Person 5:
 - Person 6: 24040102038
-- Person 7:
+- Person 7: 23040102128
 - Person 8: 23040102086
 
 ## Fixed Design Decisions
