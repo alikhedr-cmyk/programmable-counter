@@ -1,10 +1,22 @@
 # Programmable Counter in Verilog
 
 ## Project Overview
-This project implements a programmable digital counter in Verilog. The design is divided into separate modules so that control, synchronization, arithmetic, features, verification, and integration can be developed in parallel by an 8-person team.
+This project implements a Programmable Counter using Verilog HDL.
+The system supports multiple operations including:
+Up Counting
+Down Counting
+Load a specific value
+The design follows a Control + Datapath architecture, similar to basic computer architecture systems
 
-## Selected Topic
-Programmable Counter
+## System Architecture
+
+
+## Features
+Supports Up, Down, and Load operations
+Configurable bit-width using parameters
+Wrap-around logic
+Overflow and underflow detection
+Fully synchronous design
 
 ## Repository Structure
 ```text
@@ -56,9 +68,17 @@ programmable-counter/
 - Esma : `counter_core.v`
 - Muqaddas : `features.v`
 - Islam : `params.vh`
-- Orpy: `control_unit_tb.v` and `counter_core_tb.v`
-- Nikita: `testbench.v` and GTKWave screenshots
+- Orpy : `control_unit_tb.v` and `counter_core_tb.v`
+- Nikita : `testbench.v` and GTKWave screenshots
 - Gehad : `top_module.v`, integration, GitHub organization, and final report assembly
+
+## Verification
+Unit Testing
+control_unit_tb.v
+counter_core_tb.v
+System Testing
+testbench.v
+Waveforms are analyzed using.
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
@@ -102,3 +122,6 @@ vvp .\counter_core_tb.out
 - Compress the source code folder and report into one ZIP file for ALMS
 - Add waveform screenshots and testbench results to the report
 - Include all required names, student IDs, and signatures in the printed report
+
+## Final Note
+This project demonstrates a simplified Control + Datapath system, applying key concepts from Computer Architecture including sequential logic, modular design, and hardware verification.
