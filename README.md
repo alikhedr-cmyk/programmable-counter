@@ -57,7 +57,7 @@ programmable-counter/
 - Muqaddas : `features.v`
 - Person 5: `params.vh`
 - Orpy: `control_unit_tb.v` and `counter_core_tb.v`
-- Person 7: `testbench.v` and GTKWave screenshots
+- Nikita: `testbench.v` and GTKWave screenshots
 - Gehad : `top_module.v`, integration, GitHub organization, and final report assembly
 
 ## How To Run The Project
