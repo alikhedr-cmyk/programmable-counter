@@ -4,7 +4,7 @@
 This project implements a programmable digital counter in Verilog. The design is divided into separate modules so that control, synchronization, arithmetic, features, verification, and integration can be developed in parallel by an 8-person team.
 
 ## Selected Topic
-Replace this line with the exact project/topic name chosen from the course spreadsheet.
+Programmable Counter
 
 ## Repository Structure
 ```text
