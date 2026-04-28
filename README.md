@@ -56,9 +56,9 @@ programmable-counter/
 - Esma : `counter_core.v`
 - Muqaddas : `features.v`
 - Person 5: `params.vh`
-- Person 6: `control_unit_tb.v` and `counter_core_tb.v`
+- Orpy: `control_unit_tb.v` and `counter_core_tb.v`
 - Person 7: `testbench.v` and GTKWave screenshots
-- Person 8: `top_module.v`, integration, GitHub organization, and final report assembly
+- Gehad : `top_module.v`, integration, GitHub organization, and final report assembly
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
