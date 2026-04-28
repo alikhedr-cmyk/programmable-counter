@@ -22,8 +22,6 @@ programmable-counter/
 |   |-- counter_core_tb.v
 |-- docs/
 |   |-- report_notes.md
-|   |-- report_template.md
-|   |-- submission_checklist.md
 |   |-- team_task_breakdown.md
 |-- .gitignore
 |-- README.md
