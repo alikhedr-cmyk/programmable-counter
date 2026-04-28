@@ -1,4 +1,4 @@
-# Counter Project Working Notes
+# Programmable Counter Working Notes
 
 ## Selected Topic
 - Exact topic from the spreadsheet:

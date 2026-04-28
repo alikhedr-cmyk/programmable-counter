@@ -8,7 +8,7 @@ Use this file as a guide when preparing the final report in Word or PDF. The cou
 Put the GitHub repository link at the beginning of the report.
 
 ### Project Title
-Configurable Digital Counter in Verilog
+Programmable Counter in Verilog
 
 ### Group Members Table
 | Student Name and Surname | Student ID | Signature |

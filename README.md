@@ -1,14 +1,14 @@
-# Configurable Digital Counter in Verilog
+# Programmable Counter in Verilog
 
 ## Project Overview
-This project implements a configurable digital counter in Verilog. The design is divided into separate modules so that control, synchronization, arithmetic, features, verification, and integration can be developed in parallel by an 8-person team.
+This project implements a programmable digital counter in Verilog. The design is divided into separate modules so that control, synchronization, arithmetic, features, verification, and integration can be developed in parallel by an 8-person team.
 
 ## Selected Topic
 Replace this line with the exact project/topic name chosen from the course spreadsheet.
 
 ## Repository Structure
 ```text
-counter-project/
+programmable-counter/
 |-- src/
 |   |-- top_module.v
 |   |-- control_unit.v
