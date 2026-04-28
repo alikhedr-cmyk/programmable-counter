@@ -7,7 +7,7 @@
 - https://github.com/alikhedr-cmyk/programmable-counter
 
 ## Team Members
-- Person 1: Trneem Abdulmaksud
+- Person 1: Trneem Abdelmaksud
 - Person 2:
 - Person 3: Esma Selim
 - Person 4: Muqaddas samadova
