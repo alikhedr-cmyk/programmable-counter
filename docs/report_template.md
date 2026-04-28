@@ -18,6 +18,9 @@ Configurable Digital Counter in Verilog
 | | | |
 | | | |
 | | | |
+| | | |
+| | | |
+| | | |
 
 ## 1. Project Description
 Briefly describe what the project does and why it is useful.
@@ -30,6 +33,7 @@ Suggested points:
 ## 2. Digital Design
 Insert a schematic or block diagram showing:
 - `control_unit`
+- `sync_logic`
 - `counter_core`
 - `features`
 - `top_module`
@@ -41,13 +45,14 @@ Then explain the design in simple words.
 Mention the project features that make it different, for example:
 - configurable bit-width
 - wrap-around behavior
-- min/max limits
+- overflow and underflow flags
 - modular design
 
 ## 4. Verilog Implementation
 Include the Verilog code for:
 - `top_module.v`
 - `control_unit.v`
+- `sync_logic.v`
 - `counter_core.v`
 - `features.v`
 - `testbench.v`

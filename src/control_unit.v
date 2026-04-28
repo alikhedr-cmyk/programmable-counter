@@ -1,27 +1,27 @@
 module control_unit(
-    input  wire       reset,
-    input  wire       enable,
     input  wire [1:0] mode,
-    output reg        do_up,
-    output reg        do_down,
-    output reg        do_load,
-    output reg        do_hold
+    output reg        req_up,
+    output reg        req_down,
+    output reg        req_load,
+    output reg        req_hold
 );
 
     always @(*) begin
-        do_up   = 1'b0;
-        do_down = 1'b0;
-        do_load = 1'b0;
-        do_hold = 1'b1;
+        req_up   = 1'b0;
+        req_down = 1'b0;
+        req_load = 1'b0;
+        req_hold = 1'b0;
 
-        // TODO: Person 1 writes control logic here
-        // Priority:
-        // 1. reset
-        // 2. load
-        // 3. up/down
-        // 4. hold
+        case (mode)
+            2'b00: req_hold = 1'b1;
+            2'b01: req_up   = 1'b1;
+            2'b10: req_down = 1'b1;
+            2'b11: req_load = 1'b1;
+            default: req_hold = 1'b1;
+        endcase
+
+        // TODO: Person 1 can replace this with the final truth table
+        // or FSM version if the team decides an FSM is needed.
     end
 
 endmodule
-
-

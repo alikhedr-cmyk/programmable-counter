@@ -13,6 +13,9 @@
 - Person 3:
 - Person 4:
 - Person 5:
+- Person 6:
+- Person 7:
+- Person 8:
 
 ## Student IDs
 - Person 1:
@@ -20,6 +23,9 @@
 - Person 3:
 - Person 4:
 - Person 5:
+- Person 6:
+- Person 7:
+- Person 8:
 
 ## Fixed Design Decisions
 - Counter width default: `4-bit`
@@ -40,10 +46,13 @@
 
 ## Module Ownership
 - `control_unit.v`: Person 1
-- `counter_core.v`: Person 2
-- `features.v`: Person 3
-- `testbench.v`: Person 4
-- `top_module.v`: Person 5
+- `sync_logic.v`: Person 2
+- `counter_core.v`: Person 3
+- `features.v`: Person 4
+- `params.vh`: Person 5
+- `control_unit_tb.v` and `counter_core_tb.v`: Person 6
+- `testbench.v` and GTKWave output: Person 7
+- `top_module.v`, GitHub integration, and final report assembly: Person 8
 
 ## Report Assets To Collect
 - Project schematic image

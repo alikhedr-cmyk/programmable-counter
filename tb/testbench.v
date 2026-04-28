@@ -10,6 +10,8 @@ module testbench;
     reg  [1:0]           mode;
     reg  [WIDTH-1:0]     load_data;
     wire [WIDTH-1:0]     count_out;
+    wire                 overflow_flag;
+    wire                 underflow_flag;
 
     top_module #(
         .WIDTH(WIDTH),
@@ -21,7 +23,9 @@ module testbench;
         .enable(enable),
         .mode(mode),
         .load_data(load_data),
-        .count_out(count_out)
+        .count_out(count_out),
+        .overflow_flag(overflow_flag),
+        .underflow_flag(underflow_flag)
     );
 
     initial begin
@@ -41,16 +45,16 @@ module testbench;
         #10;
         reset = 1'b0;
 
-        // TODO: Person 4 writes all test cases here
+        // TODO: Person 7 writes the full-system test cases here.
         // Test cases:
         // 1. hold
         // 2. up
         // 3. down
         // 4. load
-        // 5. reset
-        // 6. enable
-        // 7. max/min
-        // 8. wrap-around
+        // 5. reset during load
+        // 6. enable toggling during down-count
+        // 7. max/min terminal behavior
+        // 8. wrap-around and flags
 
         #100;
         $finish;

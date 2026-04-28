@@ -1,7 +1,7 @@
 # Configurable Digital Counter in Verilog
 
 ## Project Overview
-This project implements a configurable digital counter in Verilog. The design is divided into small modules so that the control logic, counting core, extra features, integration, and testing can be developed and explained separately.
+This project implements a configurable digital counter in Verilog. The design is divided into separate modules so that control, synchronization, arithmetic, features, verification, and integration can be developed in parallel by an 8-person team.
 
 ## Selected Topic
 Replace this line with the exact project/topic name chosen from the course spreadsheet.
@@ -12,24 +12,33 @@ counter-project/
 |-- src/
 |   |-- top_module.v
 |   |-- control_unit.v
+|   |-- sync_logic.v
 |   |-- counter_core.v
 |   |-- features.v
+|   |-- params.vh
 |-- tb/
 |   |-- testbench.v
+|   |-- control_unit_tb.v
+|   |-- counter_core_tb.v
 |-- docs/
 |   |-- report_notes.md
 |   |-- report_template.md
 |   |-- submission_checklist.md
+|   |-- team_task_breakdown.md
 |-- .gitignore
 |-- README.md
 ```
 
 ## Module Summary
 - `top_module.v`: connects all modules together
-- `control_unit.v`: decodes `reset`, `enable`, and `mode`
-- `counter_core.v`: performs basic counter operations
-- `features.v`: applies extra project features such as limits or wrap-around
-- `testbench.v`: verifies the design through simulation
+- `control_unit.v`: decodes the `mode` only
+- `sync_logic.v`: handles `reset`, `enable`, and execution gating
+- `counter_core.v`: performs basic increment, decrement, and load operations
+- `features.v`: holds wrap-around, flags, and terminal-count behavior
+- `params.vh`: shared configuration header for parameter-related work
+- `control_unit_tb.v`: unit testbench for the control logic
+- `counter_core_tb.v`: unit testbench for the arithmetic core
+- `testbench.v`: full-system simulation after integration
 
 ## Basic Design Assumptions
 - Default counter width is `4-bit`
@@ -45,10 +54,13 @@ counter-project/
 
 ## Team Task Distribution
 - Person 1: `control_unit.v`
-- Person 2: `counter_core.v`
-- Person 3: `features.v`
-- Person 4: `testbench.v`
-- Person 5: `top_module.v`, integration, GitHub organization, final report collection
+- Person 2: `sync_logic.v`
+- Person 3: `counter_core.v`
+- Person 4: `features.v`
+- Person 5: `params.vh`
+- Person 6: `control_unit_tb.v` and `counter_core_tb.v`
+- Person 7: `testbench.v` and GTKWave screenshots
+- Person 8: `top_module.v`, integration, GitHub organization, and final report assembly
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
@@ -57,14 +69,14 @@ You can simulate the design using Icarus Verilog and view the waveform using GTK
 - Icarus Verilog
 - GTKWave
 
-### Compile
+### Compile The Full System
 Run the following command from the project root:
 
 ```powershell
-iverilog -o sim.out .\src\top_module.v .\src\control_unit.v .\src\counter_core.v .\src\features.v .\tb\testbench.v
+iverilog -o sim.out .\src\top_module.v .\src\control_unit.v .\src\sync_logic.v .\src\counter_core.v .\src\features.v .\tb\testbench.v
 ```
 
-### Run The Testbench
+### Run The Full-System Testbench
 ```powershell
 vvp .\sim.out
 ```
@@ -72,6 +84,18 @@ vvp .\sim.out
 ### Open The Waveform
 ```powershell
 gtkwave .\counter_wave.vcd
+```
+
+### Unit Test For `control_unit`
+```powershell
+iverilog -o control_unit_tb.out .\src\control_unit.v .\tb\control_unit_tb.v
+vvp .\control_unit_tb.out
+```
+
+### Unit Test For `counter_core`
+```powershell
+iverilog -o counter_core_tb.out .\src\counter_core.v .\tb\counter_core_tb.v
+vvp .\counter_core_tb.out
 ```
 
 ## Notes For The Final Submission
