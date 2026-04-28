@@ -5,7 +5,6 @@ Use this file as a guide when preparing the final report in Word or PDF. The cou
 ## First Page
 
 ### GitHub Link
-GitHub Repository Link: https://github.com/alikhedr-cmyk/programmable-counter
 
 ### Project Title
 Programmable Counter in Verilog
