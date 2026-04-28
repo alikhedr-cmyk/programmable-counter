@@ -5,7 +5,7 @@ Use this file as a guide when preparing the final report in Word or PDF. The cou
 ## First Page
 
 ### GitHub Link
-Put the GitHub repository link at the beginning of the report.
+GitHub Repository Link: https://github.com/alikhedr-cmyk/programmable-counter
 
 ### Project Title
 Programmable Counter in Verilog
