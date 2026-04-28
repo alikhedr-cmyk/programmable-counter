@@ -53,9 +53,9 @@ programmable-counter/
   - `2'b11` = Load
 
 ## Team Task Distribution
-- Person 1: `control_unit.v`
+- Trneem : `control_unit.v`
 - Person 2: `sync_logic.v`
-- Person 3: `counter_core.v`
+- Esma : `counter_core.v`
 - Person 4: `features.v`
 - Person 5: `params.vh`
 - Person 6: `control_unit_tb.v` and `counter_core_tb.v`
