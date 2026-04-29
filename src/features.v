@@ -11,19 +11,17 @@ module features #(
     output reg              underflow_flag
 );
     always @(*) begin
-        final_count    = raw_count;
-        overflow_flag  = 1'b0;
+        // set defaults 
+        final_count = raw_count;
+        overflow_flag = 1'b0;
         underflow_flag = 1'b0;
-
-        if (do_up == 1'b1) begin
-            if (raw_count == MAX_VAL[WIDTH-1:0]) begin
-                overflow_flag = 1'b1;
-            end
+        // counter_core already did the counting, so after wrap up, raw_count will be 0
+        if (do_up && raw_count == MIN_VAL[WIDTH-1:0]) begin
+            overflow_flag = 1'b1; // overflow happened
         end
-        else if (do_down == 1'b1) begin
-            if (raw_count == MIN_VAL[WIDTH-1:0]) begin
-                underflow_flag = 1'b1;
-            end
+        // after wrap down, raw_count will be 15
+        if (do_down && raw_count == MAX_VAL[WIDTH-1:0]) begin
+            underflow_flag = 1'b1; // underflow happened
         end
     end
 
