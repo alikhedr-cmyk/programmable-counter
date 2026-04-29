@@ -9,7 +9,7 @@ Load a specific value
 The design follows a Control + Datapath architecture, similar to basic computer architecture systems
 
 ## System Architecture
-
+<img width="794" height="319" alt="image" src="https://github.com/user-attachments/assets/30c4001c-8b2d-430a-a919-715b4a32cd5f" />
 
 ## Features
 Supports Up, Down, and Load operations
