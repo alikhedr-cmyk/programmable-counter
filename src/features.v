@@ -35,9 +35,3 @@ module features #(
     end
 
 endmodule
-
-        // TODO: Person 4 adds wrap-around, terminal-count behavior,
-        // overflow, and underflow handling here.
-        // TODO: Person 5 can connect shared parameters or limit registers
-        // through this module if the team keeps features separate.
-
