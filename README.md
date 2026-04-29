@@ -78,7 +78,7 @@ control_unit_tb.v
 counter_core_tb.v
 System Testing
 testbench.v
-Waveforms are analyzed using.
+Waveforms are analyzed using GTKWave.
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
