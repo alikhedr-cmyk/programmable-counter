@@ -6,7 +6,6 @@ module sync_logic(
     input  wire req_down,
     input  wire req_load,
     input  wire req_hold,
-    
     output wire core_reset,
     output reg  do_up,
     output reg  do_down,
@@ -21,7 +20,7 @@ module sync_logic(
         do_down = 1'b0;
         do_load = 1'b0;
         do_hold = 1'b1;
-
+        
         if (reset) begin
             do_hold = 1'b1;
         end else if (!enable) begin
