@@ -6,6 +6,7 @@ module sync_logic(
     input  wire req_down,
     input  wire req_load,
     input  wire req_hold,
+    
     output wire core_reset,
     output reg  do_up,
     output reg  do_down,
