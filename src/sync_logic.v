@@ -13,19 +13,7 @@ module sync_logic(
     output reg  do_load,
     output reg  do_hold
 );
-    
-    reg reset_sync_1, reset_sync_2;
 
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            reset_sync_1 <= 1'b1;
-            reset_sync_2 <= 1'b1;
-        end else begin
-            reset_sync_1 <= 1'b0;
-            reset_sync_2 <= reset_sync_1;
-        end
-    end
-    
     assign core_reset = reset;
 
     always @(*) begin
