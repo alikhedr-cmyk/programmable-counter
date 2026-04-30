@@ -10,34 +10,19 @@ module features #(
     output reg              overflow_flag,
     output reg              underflow_flag
 );
-
     always @(*) begin
-        final_count     = raw_count;
-        overflow_flag   = 1'b0;
-        underflow_flag  = 1'b0;
-
-        if (do_up == 1'b1) begin
-            if (raw_count == MAX_VAL[WIDTH-1:0]) begin
-                final_count   = MIN_VAL[WIDTH-1:0];
-                overflow_flag = 1'b1;
-            end else begin
-                final_count = raw_count + 1'b1;
-            end
+        // set defaults 
+        final_count = raw_count;
+        overflow_flag = 1'b0;
+        underflow_flag = 1'b0;
+        // counter_core already did the counting, so after wrap up, raw_count will be 0
+        if (do_up && raw_count == MIN_VAL[WIDTH-1:0]) begin
+            overflow_flag = 1'b1; // overflow happened
         end
-        else if (do_down == 1'b1) begin
-            if (raw_count == MIN_VAL[WIDTH-1:0]) begin
-                final_count    = MAX_VAL[WIDTH-1:0];
-                underflow_flag = 1'b1;
-            end else begin
-                final_count = raw_count - 1'b1;
-            end
+        // after wrap down, raw_count will be 15
+        if (do_down && raw_count == MAX_VAL[WIDTH-1:0]) begin
+            underflow_flag = 1'b1; // underflow happened
         end
     end
 
 endmodule
-
-        // TODO: Person 4 adds wrap-around, terminal-count behavior,
-        // overflow, and underflow handling here.
-        // TODO: Person 5 can connect shared parameters or limit registers
-        // through this module if the team keeps features separate.
-

@@ -6,13 +6,26 @@ module sync_logic(
     input  wire req_down,
     input  wire req_load,
     input  wire req_hold,
+    
     output wire core_reset,
     output reg  do_up,
     output reg  do_down,
     output reg  do_load,
     output reg  do_hold
 );
+    
+    reg reset_sync_1, reset_sync_2;
 
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            reset_sync_1 <= 1'b1;
+            reset_sync_2 <= 1'b1;
+        end else begin
+            reset_sync_1 <= 1'b0;
+            reset_sync_2 <= reset_sync_1;
+        end
+    end
+    
     assign core_reset = reset;
 
     always @(*) begin
@@ -37,9 +50,6 @@ module sync_logic(
         end else if (req_hold) begin
             do_hold = 1'b1;
         end
-
-        // TODO: Person 2 decides whether the final reset strategy stays
-        // asynchronous or moves to a fully synchronous implementation.
     end
 
 endmodule
