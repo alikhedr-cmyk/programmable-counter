@@ -16,7 +16,7 @@ Supports Up, Down, and Load operations
 Configurable bit-width using parameters
 Wrap-around logic
 Overflow and underflow detection
-Fully synchronous design
+Asynchronous reset path with synchronous counting
 
 ## Repository Structure
 ```text
@@ -73,12 +73,11 @@ programmable-counter/
 - Gehad : `top_module.v`, integration, GitHub organization, and final report assembly
 
 ## Verification
-Unit Testing
-control_unit_tb.v
-counter_core_tb.v
-System Testing
-testbench.v
-Waveforms are analyzed using GTKWave.
+- Unit testing is available for:
+  - `control_unit_tb.v`
+  - `counter_core_tb.v`
+- Full-system testing is prepared in `testbench.v` and is completed during final integration
+- Waveforms are analyzed using GTKWave
 
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
@@ -91,7 +90,7 @@ You can simulate the design using Icarus Verilog and view the waveform using GTK
 Run the following command from the project root:
 
 ```powershell
-iverilog -o sim.out .\src\top_module.v .\src\control_unit.v .\src\sync_logic.v .\src\counter_core.v .\src\features.v .\tb\testbench.v
+iverilog -I .\src -o sim.out .\src\top_module.v .\src\control_unit.v .\src\sync_logic.v .\src\counter_core.v .\src\features.v .\tb\testbench.v
 ```
 
 ### Run The Full-System Testbench
@@ -106,13 +105,13 @@ gtkwave .\counter_wave.vcd
 
 ### Unit Test For `control_unit`
 ```powershell
-iverilog -o control_unit_tb.out .\src\control_unit.v .\tb\control_unit_tb.v
+iverilog -I .\src -o control_unit_tb.out .\src\control_unit.v .\tb\control_unit_tb.v
 vvp .\control_unit_tb.out
 ```
 
 ### Unit Test For `counter_core`
 ```powershell
-iverilog -o counter_core_tb.out .\src\counter_core.v .\tb\counter_core_tb.v
+iverilog -I .\src -o counter_core_tb.out .\src\counter_core.v .\tb\counter_core_tb.v
 vvp .\counter_core_tb.out
 ```
 
