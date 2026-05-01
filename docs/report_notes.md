@@ -14,7 +14,7 @@
 - Person 5: Islam Dadaev
 - Person 6: Shahajina Akter Orpy
 - Person 7: Nikita Afanasev
-- Person 8:Gehad Ali Khedr
+- Person 8: Gehad Ali Khedr
 
 ## Student IDs
 - Person 1: 22040102136
