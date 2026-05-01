@@ -116,10 +116,10 @@ module testbench;
 
         if ((count_out !== expected_count) || (overflow_flag !== expected_overflow) || (underflow_flag !== expected_underflow)) begin
             errors = errors + 1;
-            $display("[%0t] FAIL exp: count=%0d of=%b uf=%b | got: count=%0d of=%b uf=%b", $time, expected_count, expected_overflow, expected_underflow, count_out, overflow_flag, underflow_flag);
+            $display("[%0t] FAIL exp: count = %0d overflow = %b underflow = %b | got: count = %0d overflow = %b underflow = %b", $time, expected_count, expected_overflow, expected_underflow, count_out, overflow_flag, underflow_flag);
         end
         else begin
-            $display("[%0t] PASS count=%0d of=%b uf=%b", $time, count_out, overflow_flag, underflow_flag);
+            $display("[%0t] PASS count = %0d overflow = %b underflow = %b", $time, count_out, overflow_flag, underflow_flag);
         end
     end
     endtask
@@ -179,7 +179,7 @@ module testbench;
         apply_and_check(FALSE, FALSE, DOWN, ZERO_VALUE);
 
         /* 7. Max/min terminal behavior. */
-        $display("---- Test 7: MAX/MIN TERMINAL BEHAVIOR. ----");
+        $display("---- Test 7: Max/min terminal behavior. ----");
         apply_and_check(FALSE, TRUE, LOAD, MAX_COUNT);
         apply_and_check(FALSE, TRUE, HOLD, ZERO_VALUE);
         apply_and_check(FALSE, TRUE, LOAD, MIN_COUNT);
