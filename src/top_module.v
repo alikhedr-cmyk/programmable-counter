@@ -1,5 +1,5 @@
 module top_module #(
-    parameter WIDTH = 4,
+    parameter WIDTH   = 4,
     parameter MAX_VAL = (1 << WIDTH) - 1,
     parameter MIN_VAL = 0
 )(
@@ -76,7 +76,5 @@ module top_module #(
     );
 
     assign count_out = final_count;
-
-    // TODO: Person 8 checks full integration and final wiring here.
 
 endmodule
