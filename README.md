@@ -79,6 +79,12 @@ programmable-counter/
 - Full-system testing is prepared in `testbench.v` and is completed during final integration
 - Waveforms are analyzed using GTKWave
 
+# GTKWave screenshots
+<img width="800" height="297" alt="image" src="https://github.com/user-attachments/assets/88963a7e-6f6d-4b2c-b565-a1a821e7df5c" />
+<img width="765" height="77" alt="image" src="https://github.com/user-attachments/assets/3fb0a351-7662-4dc1-9226-1732544dfc4b" />
+<img width="767" height="70" alt="image" src="https://github.com/user-attachments/assets/f5228e0e-7f54-4015-87e4-01e15a031c6f" />
+
+
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
 
