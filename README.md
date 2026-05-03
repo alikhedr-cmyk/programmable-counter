@@ -94,7 +94,6 @@ programmable-counter/
 ### Underflow Case
 ![Underflow waveform](docs/images/gtkwave_underflow.png)
 
-
 ## How To Run The Project
 You can simulate the design using Icarus Verilog and view the waveform using GTKWave.
 
