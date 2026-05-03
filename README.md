@@ -131,12 +131,5 @@ iverilog -I .\src -o counter_core_tb.out .\src\counter_core.v .\tb\counter_core_
 vvp .\counter_core_tb.out
 ```
 
-## Notes For The Final Submission
-- Upload the full source code and report to GitHub
-- Put the GitHub repository link at the beginning of the report
-- Compress the source code folder and report into one ZIP file for ALMS
-- Add waveform screenshots and testbench results to the report
-- Include all required names, student IDs, and signatures in the printed report
-
 ## Final Note
 This project demonstrates a simplified Control + Datapath system, applying key concepts from Computer Architecture including sequential logic, modular design, and hardware verification.
